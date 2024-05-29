@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>變異浣糕實驗室!</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/css.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./img/icon.png" />
+  </head>
+
+  <body>
+    <!-- 首頁，用戶需要點擊按鈕才能進入作答 -->
+    <div id="no">
+      <img src="./img/background-4.png" />
+      <div class="no-page">
+        <p>請使用手機或電腦開啟</p>
+      </div>
+    </div>
+    <div class="index">
+      <div id="home">
+        <div id="musicpage">
+          <div class="musicpage-button">
+            <h2>此測驗有搭配音樂<br />您可以開啟聲音獲得更佳的體驗~</h2>
+          </div>
+        </div>
+        <div class="title-button">
+          <button id="start-button">START</button>
+        </div>
+        <p>來測測你是哪一種變異浣糕?</p>
+        <audio id="background-music" loop>
+          <source
+            src="./music/LITE BRITE - Density & Time.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+      </div>
+      <div id="preface" style="display: none">
+        <div class="preface-img">
+          <button id="ready">開始實驗</button>
+        </div>
+      </div>
+      <form id="quiz-form" style="display: none">
+        <!-- 問題 -->
+        <div class="question one-q" data-question="1">
+          <div class="ani"><img src="./img/導入動畫.GIF" /></div>
+          <p class="p-title">Q-1</p>
+          <p class="page">
+            這是一個你與潛意識的饗宴，你會選擇參與哪個實驗呢？<br />
+            A.還在實驗階段中，但刺激又有趣的計畫。<br />B.絕對安全無感，像是睡了個好覺的計畫。
+          </p>
+          <div class="mask">
+            <img src="./img/題目.png" />
+          </div>
+          <img src="./img/緊張.gif" />
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q1"
+              value="1"
+              data-next-question="2"
+              id="1"
+            /><label for="1"> A</label>
+            <input
+              type="radio"
+              name="q1"
+              value="2"
+              data-next-question="2"
+              id="2"
+            /><label for="2">B</label>
+          </div>
+        </div>
+        <div class="question two-q" data-question="2" style="display: none">
+          <p class="p-title">Q-2</p>
+          <p class="page">
+            你即將喝下一瓶實驗藥水，它可以帶你進入任何空間，你想去…?<br />A.有世界美食以及名人的頂級派對<br />
+            B.回到小時候最無憂無慮的時光<br />
+            C.所有資源應有盡有的舒適房間耍廢休息<br />
+            D.有彩色珊瑚礁與各種絕種生物的夢幻海洋世界
+          </p>
+          <img src="./img/IMG_5111.GIF" />
+          <div class="mask"><img src="./img/題目2.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q2"
+              value="2000"
+              data-next-question="3"
+              id="21"
+            /><label for="21">A</label>
+
+            <input
+              type="radio"
+              name="q2"
+              value="1000"
+              data-next-question="3"
+              id="22"
+            /><label for="22">B</label>
+
+            <input
+              type="radio"
+              name="q2"
+              value="1000"
+              data-next-question="3"
+              id="23"
+            /><label for="23">C</label>
+
+            <input
+              type="radio"
+              name="q2"
+              value="2000"
+              data-next-question="3"
+              id="24"
+            /><label for="24">D</label>
+          </div>
+        </div>
+        <div class="question three-q" data-question="3" style="display: none">
+          <p class="p-title">Q-3</p>
+          <p class="page">
+            快樂的時光總是過得最快，倒數10分鐘你會怎麼想?…,<br />
+            A.人生不可能這麼快樂，該醒醒了，面對現實<br />
+            B.我想再索取一次藥水享受一次<br />
+            C.我究竟會因為這個藥水變成什麼呢？<br />
+            D.享受最後10分鐘，說不定我會變成理想的自己
+          </p>
+          <img src="./img/IMG_5110.GIF" />
+          <div class="mask"><img src="./img/題目.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q3"
+              value="20"
+              data-next-question="4"
+              id="31"
+            />
+            <label for="31">A</label>
+            <input
+              type="radio"
+              name="q3"
+              value="10"
+              data-next-question="4"
+              id="32"
+            />
+            <label for="32">B</label>
+            <input
+              type="radio"
+              name="q3"
+              value="20"
+              data-next-question="4"
+              id="33"
+            />
+            <label for="33">C</label>
+            <input
+              type="radio"
+              name="q3"
+              value="10"
+              data-next-question="4"
+              id="34"
+            />
+            <label for="34">D</label>
+          </div>
+        </div>
+        <div class="question four-q" data-question="4" style="display: none">
+          <p class="p-title">Q-4</p>
+          <p class="page">
+            現在，要面對一些壞事了，你最無法忍受以下哪一件事<br />
+            A.排隊1個小時，結果被插隊要再排1小時<br />
+            B.當大小姐的管家一天，只能跟著她，並聽她指揮<br />
+            C.提前3個月排行程訂飯店，結果去不了<br />
+            D.一份穩定的工作，但每天只做同樣一件事100次
+          </p>
+          <img src="./img/IMG_5109.GIF" />
+          <div class="mask"><img src="./img/題目.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q4"
+              value="2"
+              data-next-question="5"
+              id="41"
+            />
+            <label for="41">A</label>
+            <input
+              type="radio"
+              name="q4"
+              value="1"
+              data-next-question="5"
+              id="42"
+            />
+            <label for="42">B</label>
+            <input
+              type="radio"
+              name="q4"
+              value="2"
+              data-next-question="5"
+              id="43"
+            />
+            <label for="43">C</label>
+            <input
+              type="radio"
+              name="q4"
+              value="1"
+              data-next-question="5"
+              id="44"
+            />
+            <label for="44">D</label>
+          </div>
+        </div>
+        <div class="question five-q" data-question="5" style="display: none">
+          <p class="p-title">Q-5</p>
+          <p class="page">
+            突然旁邊出現一個熟悉的身影，發現你的朋友已經變異了，正在大聲哭泣，你會?<br />
+            A.我來看看你變成什麼了?<br />
+            B.你怎麼在這裡!發生什麼事了<br />
+            C.哇!希望我等等不要變這樣!<br />
+            D.他好像很不滿意現在的自己，我要怎麼安慰他
+          </p>
+          <img src="./img/IMG_5108.GIF" />
+          <div class="mask"><img src="./img/題目.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q5"
+              value="100"
+              data-next-question="6"
+              id="51"
+            />
+            <label for="51">A</label>
+            <input
+              type="radio"
+              name="q5"
+              value="200"
+              data-next-question="6"
+              id="52"
+            />
+            <label for="52">B</label>
+            <input
+              type="radio"
+              name="q5"
+              value="100"
+              data-next-question="6"
+              id="53"
+            />
+            <label for="53">C</label>
+            <input
+              type="radio"
+              name="q5"
+              value="200"
+              data-next-question="6"
+              id="54"
+            />
+            <label for="54">D</label>
+          </div>
+        </div>
+        <div class="question six-q" data-question="6" style="display: none">
+          <p class="p-title">Q-6</p>
+          <p class="page">
+            結果朋友給了你一張紙條：『我必須得走了』，你的反應是…?<br />
+            A蛤，為什麼？<br />
+            B是不是我做錯什麼了？還是我說話太過分了？我們可以一起解決啊！
+          </p>
+          <img src="./img/IMG_5106.GIF" />
+          <div class="mask"><img src="./img/題目.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q6"
+              value="20"
+              data-next-question="7"
+              id="61"
+            />
+            <label for="61">A</label>
+            <input
+              type="radio"
+              name="q6"
+              value="10"
+              data-next-question="7"
+              id="62"
+            />
+            <label for="62">B</label>
+          </div>
+        </div>
+        <div class="question seven-q" data-question="7" style="display: none">
+          <p class="p-title">Q-7</p>
+          <p class="page">
+            科學家想要送你一個禮物，你心裡想要…<br />
+            A.一個驚喜+一個用心的卡片<br />
+            B.超實用的東西，最好是可以解決現在問題的那種
+          </p>
+          <img src="./img/電到.gif" />
+          <div class="mask"><img src="./img/題目.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q7"
+              value="10"
+              data-next-question="8"
+              id="71"
+            />
+            <label for="71">A</label>
+            <input
+              type="radio"
+              name="q7"
+              value="20"
+              data-next-question="8"
+              id="72"
+            />
+            <label for="72">B</label>
+          </div>
+        </div>
+        <div class="question eight-q" data-question="8" style="display: none">
+          <p class="p-title">Q-8</p>
+          <p class="page">
+            實驗最後，科學家給你看了一張A4紙，你最在乎的是...<br />
+            A上面簡單的數學題目<br />
+            B旁邊隨意的插畫<br />
+            C左下角小到不行的字是什麼<br />
+            D右邊照片上是我認識的朋友
+          </p>
+          <img src="./img/IMG_5105.GIF" />
+          <div class="mask"><img src="./img/題目8.png" /></div>
+          <div class="question-one">
+            <input
+              type="radio"
+              name="q8"
+              value="2"
+              data-next-question="9"
+              id="81"
+            />
+            <label for="81">A</label>
+            <input
+              type="radio"
+              name="q8"
+              value="1"
+              data-next-question="9"
+              id="82"
+            />
+            <label for="82">B</label>
+            <input
+              type="radio"
+              name="q8"
+              value="2"
+              data-next-question="9"
+              id="83"
+            />
+            <label for="83">C</label>
+            <input
+              type="radio"
+              name="q8"
+              value="1"
+              data-next-question="9"
+              id="84"
+            />
+            <label for="84">D</label>
+          </div>
+        </div>
+        <div
+          class="question nine-q"
+          data-question="9"
+          style="display: none"
+          id="submit"
+        >
+          <img class="s-background" src="./img/匯入葉.JPG" />
+          <audio id="submit-music">
+            <source
+              src="./music/Celebration Sound Effect 慶祝音效.mp3"
+              type="audio/mp3"
+            />
+          </audio>
+          <div class="anwer-button">
+            <input
+              type="submit"
+              value="查看結果"
+              data-next-question="14"
+              id="answer"
+            />
+          </div>
+        </div>
+      </form>
+      <!-- 顯示結果的區域 -->
+      <div id="result" style="display: none">
+        <p id="score"></p>
+        <p id="interpretation"></p>
+        <img id="result-image" style="display: none" />
+
+        <div class="result-down">
+          <img src="./img/感動.gif" />
+          <p class="text">
+            本測驗純粹為娛樂，希望大家玩得開心就好!!<br />若覺得有趣也歡迎非享給更多的朋友!
+          </p>
+          <div class="restart-button-group">
+            <button id="instergram">分享結果</button>
+            <a id="download" download="變異浣糕實驗室">下載圖片</a>
+          </div>
+          <div class="result-button">
+            <button id="restart-button">再測一次</button>
+          </div>
+
+          <p class="vcd-logo">
+            © 2023 @hello_yan / © 2023 @user-lj9fl7yz4u<br />© 2023
+            raccake222@gmail.com
+          </p>
+        </div>
+        <div class="loading">
+          <img src="./img/loading.GIF" />
+        </div>
+        <div class="animation">
+          <img src="./img/最後.gif" />
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
